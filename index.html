@@ -76,6 +76,11 @@
     position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); z-index:2;
     text-align:center; padding:0 4vw;
   }
+  .hero-content::before{
+    content:""; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:130%; height:180%; pointer-events:none;
+    background:radial-gradient(ellipse at center, rgba(0,0,0,.55) 0%, rgba(0,0,0,.3) 45%, rgba(0,0,0,0) 72%);
+  }
   .hero-kr{ font-size:clamp(20px,1.6vw,26px); letter-spacing:.35em; color:var(--ink-dim); margin-bottom:.6em;}
   .hero-title{
     font-family:'Cormorant Garamond', serif; font-weight:600;
