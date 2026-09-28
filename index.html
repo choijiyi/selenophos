@@ -73,7 +73,7 @@
   .hero-corner.bl{ bottom:-1px; left:-1px; transform:scaleY(-1); }
   .hero-corner.br{ bottom:-1px; right:-1px; transform:scale(-1,-1); }
   .hero-content{
-    position:absolute; left:0; right:0; bottom:6%; z-index:2;
+    position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); z-index:2;
     text-align:center; padding:0 4vw;
   }
   .hero-kr{ font-size:clamp(14px,1.6vw,20px); letter-spacing:.35em; color:var(--ink-dim); margin-bottom:.6em;}
@@ -100,7 +100,7 @@
   .hub-inner{ position:absolute; inset:0; display:flex; flex-direction:column; padding:3.2vh 4vw 2.6vh; }
   .hub-header{ text-align:center; flex:0 0 auto; margin-bottom:1.6vh;}
   .hub-title{ font-size:clamp(20px,2.6vh,30px); letter-spacing:.12em; margin:0 0 .25em; }
-  .hub-title .latin{ color:var(--accent); font-size:.85em; margin-left:.5em; }
+  .hub-title .latin{ color:var(--accent); font-size:.85em; display:block; margin-top:.3em; }
   .hub-rule{ width:64px; height:1px; background:linear-gradient(90deg, transparent, var(--accent), transparent); margin:0 auto; }
 
   .hub-body{ flex:1 1 auto; display:flex; flex-direction:column; justify-content:center; gap:3.4vh; min-height:0; }
@@ -589,7 +589,7 @@
 
   document.getElementById('screen-hero').addEventListener('click', function(ev){ showScreen('hub', ev); resetIdle(); });
   document.getElementById('btn-back').addEventListener('click', function(ev){ showScreen('hub', ev); });
-  document.getElementById('btn-home').addEventListener('click', function(ev){ showScreen('hub', ev); });
+  document.getElementById('btn-home').addEventListener('click', function(ev){ showScreen('hero', ev); resetIdle(); });
   document.getElementById('btn-hub-home').addEventListener('click', function(ev){ ev.stopPropagation(); showScreen('hero', ev); resetIdle(); });
 
   // idle timeout -> return to hero screen for kiosk display
