@@ -429,10 +429,15 @@
 
   function el(tag, cls, html){ var e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; }
 
-  var CORNER_SVG = '<svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">'
-    + '<path d="M1 15 L1 4"/>'
-    + '<path d="M4 1 L15 1"/>'
-    + '<path d="M4 1 L7 4 L4 7 L1 4 Z" fill="var(--bg)"/>'
+  var CORNER_SVG = '<svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">'
+    + '<path d="M1 15 L1 3"/>'
+    + '<path d="M3 1 L15 1"/>'
+    + '<rect x="0.6" y="0.6" width="2.6" height="2.6"/>'
+    + '<path d="M2 2 C2 6 2.1 9 3.4 11.6"/>'
+    + '<path d="M2 2 C4.2 4.8 5 8 5.3 11.2"/>'
+    + '<path d="M2 2 C5.6 3.8 7.6 6.4 6.4 10.4"/>'
+    + '<path d="M2 2 C7.6 2.8 9.6 4.8 7.1 9.9"/>'
+    + '<path d="M3.4 11.6 C3 13.2 1.5 13.3 1.6 11.7 C1.7 10.5 3 10.6 3.2 11.5 C3.3 12 2.6 12.2 2.3 11.7"/>'
     + '</svg>';
 
   var allCards = [];
