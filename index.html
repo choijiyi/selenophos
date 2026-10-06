@@ -173,6 +173,10 @@
     transition:opacity 1.3s ease, transform 2.6s cubic-bezier(.19,.7,.2,1);
   }
   #screen-detail.revealed .detail-bg img{ opacity:.94; transform:scale(1); }
+  #screen-detail.is-material .detail-bg img{
+    left:18%; top:18%; right:auto; bottom:auto;
+    width:64%; height:64%; object-fit:contain;
+  }
   .detail-scrim{
     position:absolute; inset:0; z-index:1; pointer-events:none;
     background:linear-gradient(180deg, rgba(5,5,5,.28) 0%, rgba(5,5,5,.46) 28%, rgba(5,5,5,.82) 60%, rgba(5,5,5,.96) 100%);
@@ -564,6 +568,7 @@
     var screenEl = document.getElementById('screen-detail');
     screenEl.classList.remove('revealed', 'at-bottom');
     screenEl.classList.add('reveal-instant');
+    screenEl.classList.toggle('is-material', d.group === 'materials');
     void screenEl.offsetWidth;
     document.getElementById('detail-img').src = d.img;
     document.getElementById('detail-name').textContent = d.kr;
